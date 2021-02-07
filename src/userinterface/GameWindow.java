@@ -10,25 +10,29 @@ import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
 
+		
+	private GameScreen gameScreen;
+	
+	
 	public GameWindow() {
 		super("Dino Game");
-		setSize(400,400);
+		setSize(600,210);
+		setLocation(600,400);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		gameScreen = new GameScreen();
+		add(gameScreen);
+		addKeyListener(gameScreen);
+	}
+	
+	public void startGame() {
+		gameScreen.startGame();
 	}
 	
 	public static void main(String args[]) {
-		new GameWindow().setVisible(true);
+		GameWindow gw = new GameWindow();
+		gw.setVisible(true);
+		gw.startGame();
 	}
 	
-	public void paint(Graphics g) {
-		BufferedImage image = null;
-		super.paint(g);
-		try {
-			image = ImageIO.read(new File("data/images/box.png"));
-			g.drawImage(image, 100, 100,null);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+
 }
