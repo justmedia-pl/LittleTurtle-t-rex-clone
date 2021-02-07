@@ -29,7 +29,7 @@ public class MainCharacter {
 		if (y >= GROUNDY - characterRun.getFrame().getHeight()) {
 			speedY = 0;
 			y = GROUNDY - characterRun.getFrame().getHeight();
-			System.out.println(y);
+			
 		} else {
 		speedY += GRAVITY;
 		y+=speedY;

@@ -40,7 +40,7 @@ public class Land {
 
 	public void update() {
 		for(ImageLand imageLand : listImage){
-			imageLand.posX--;
+			imageLand.posX = imageLand.posX - 2;
 			}
 			ImageLand firstLand = listImage.get(0);
 			if(firstLand.posX + firstLand.image.getWidth() < 0)

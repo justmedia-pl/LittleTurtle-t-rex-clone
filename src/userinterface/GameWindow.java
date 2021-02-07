@@ -10,9 +10,11 @@ import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
 
-		
 	private GameScreen gameScreen;
 	
+	public GameScreen getGameScreen() {
+		return gameScreen;
+	}
 	
 	public GameWindow() {
 		super("Dino Game");
