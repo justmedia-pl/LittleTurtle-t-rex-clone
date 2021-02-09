@@ -11,9 +11,7 @@ import util.Resources;
 public class Clouds {
 	
 	private BufferedImage cloudImage;
-	private BufferedImage terrainImage;
 	private List<Cloud> clouds;
-	private List<Cloud> terrain;
 	private List<BufferedImage> cloudImages = new ArrayList<BufferedImage>();
 	private int cloudsDensity = 4;
 	

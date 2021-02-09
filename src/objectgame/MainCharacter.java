@@ -2,6 +2,7 @@ package objectgame;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
 
 import util.Animation;
@@ -15,6 +16,7 @@ public class MainCharacter {
 	private float y = 0;
 	private float speedY = 0;
 	private Animation characterRun;
+	private Rectangle rect;
 	
 	public MainCharacter() {
 		characterRun = new Animation(100);
@@ -22,10 +24,12 @@ public class MainCharacter {
 		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s1.png"));
 		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s2.png"));
 		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s3.png"));
+		rect = new Rectangle();
 		
 	}
 	
 	public void update() {
+		characterRun.update();
 		if (y >= GROUNDY - characterRun.getFrame().getHeight()) {
 			speedY = 0;
 			y = GROUNDY - characterRun.getFrame().getHeight();
@@ -34,7 +38,13 @@ public class MainCharacter {
 		speedY += GRAVITY;
 		y+=speedY;
 		}
-		characterRun.update();
+		rect.x = (int) x;
+		rect.y = (int) y;
+		rect.width = characterRun.getFrame().getWidth();
+		rect.height = characterRun.getFrame().getHeight();
+	}
+	public Rectangle getBound()	{
+		return rect;
 	}
 	
 	public void draw(Graphics g) {
