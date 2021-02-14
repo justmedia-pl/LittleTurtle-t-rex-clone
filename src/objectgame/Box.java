@@ -3,11 +3,7 @@ package objectgame;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
-
-import util.Resources;
 
 public class Box extends Obstacle {
 	private int posX;
@@ -15,13 +11,16 @@ public class Box extends Obstacle {
 	private Random random;
 	private Rectangle rect;
 	BufferedImage boxImage;
+	private MainCharacter mainCharacter;
+	private boolean scored = false;
 	
 	@Override
 	public void draw(Graphics g) {
 		g.drawImage(boxImage, posX,posY,null);
 	}
 	
-	public Box() {
+	public Box(MainCharacter mainCharacter) {
+		this.mainCharacter = mainCharacter;
 		posX = 200;
 		posY = 105;
 		rect = new Rectangle();
@@ -60,9 +59,23 @@ public class Box extends Obstacle {
 	public int getY() {
 		return this.posY;
 	}
+
 	public void setImage (BufferedImage image)
 	{
 		this.boxImage = image;
 	}
+	@Override
+	public boolean isOver(){
+		return (mainCharacter.getX() > posX);
+	}
 
+	@Override
+	public boolean isScored(){
+		return scored;
+	}
+
+	@Override
+	public void setScored(){
+		this.scored = true;
+	}
 }

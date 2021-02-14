@@ -12,5 +12,8 @@ public abstract class Obstacle {
 	public abstract int getY();
 	public abstract void setX(int x);
 	public abstract void setY(int y);
+	public abstract boolean isOver();
+	public abstract boolean isScored();
+	public abstract void setScored();
 	
 }

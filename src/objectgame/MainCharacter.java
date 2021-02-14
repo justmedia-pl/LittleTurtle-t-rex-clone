@@ -3,13 +3,14 @@ package objectgame;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
-import java.awt.image.BufferedImage;
 
+import userinterface.GameWindow;
 import util.Animation;
 import util.Resources;
 
 import static userinterface.GameScreen.GRAVITY;
 import static userinterface.GameScreen.GROUNDY;
+import static userinterface.GameWindow.theme;
 
 public class MainCharacter {
 	private float x = 0;
@@ -17,14 +18,18 @@ public class MainCharacter {
 	private float speedY = 0;
 	private Animation characterRun;
 	private Rectangle rect;
+	private boolean isAlive = true;
 	
 	public MainCharacter() {
-		characterRun = new Animation(100);
-		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s0.png"));
-		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s1.png"));
-		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s2.png"));
-		characterRun.addFrame(Resources.getResourceImage("data/images/ch_s3.png"));
+
+		characterRun = new Animation(200);
+		characterRun.addFrame(Resources.getResourceImage("data/images/"+theme+"/ch_1.png"));
+		characterRun.addFrame(Resources.getResourceImage("data/images/"+theme+"/ch_2.png"));
+		characterRun.addFrame(Resources.getResourceImage("data/images/"+theme+"/ch_3.png"));
+		characterRun.addFrame(Resources.getResourceImage("data/images/"+theme+"/ch_4.png"));
+
 		rect = new Rectangle();
+
 		
 	}
 	
@@ -48,13 +53,19 @@ public class MainCharacter {
 	}
 	
 	public void draw(Graphics g) {
+		if (isAlive){
 		g.setColor(Color.BLACK);
 		g.drawImage(characterRun.getFrame(), (int)x,(int)y, null);
+		}  else {
+			setY(GROUNDY-Resources.getResourceImage("data/images/"+theme+"/ch_rip.png").getHeight());
+			g.drawImage(Resources.getResourceImage("data/images/"+theme+"/ch_rip.png"),(int)x,(int)y, null);
+		}
 	}
 	public void jump() {
 		speedY = -4;
 		y += speedY;
-	}
+
+		}
 	
 	public float getX() {
 		return x;
@@ -74,6 +85,8 @@ public class MainCharacter {
 	public void setSpeedY(float speedY) {
 		this.speedY = speedY;
 	}
+	public boolean isAlive() {return isAlive;}
+	public void isAlive(boolean all) { isAlive = all;}
 	
 	
 	

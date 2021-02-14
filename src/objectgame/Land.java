@@ -8,6 +8,7 @@ import java.util.Random;
 
 import util.Resources;
 import static userinterface.GameScreen.GROUNDY;
+import static userinterface.GameWindow.theme;
 
 public class Land {
 	private List<ImageLand> listImage;
@@ -22,9 +23,9 @@ public class Land {
 	
 	public Land() {
 		random = new Random();
-		landImages.add(Resources.getResourceImage("data/images/castle.jpg"));
-		landImages.add(Resources.getResourceImage("data/images/castle.jpg"));
-		landImages.add(Resources.getResourceImage("data/images/castle.jpg"));
+		landImages.add(Resources.getResourceImage("data/images/"+theme+"/bg.jpg"));
+		landImages.add(Resources.getResourceImage("data/images/"+theme+"/bg1.jpg"));
+		landImages.add(Resources.getResourceImage("data/images/"+theme+"/bg2.jpg"));
 		
 		listImage = new ArrayList<ImageLand>();
 		
@@ -46,7 +47,6 @@ public class Land {
 			if(firstLand.posX + firstLand.image.getWidth() < 0)
 			{
 				firstLand.posX = listImage.get(listImage.size()-1).posX + firstLand.image.getWidth();
-				System.out.print("1");
 				listImage.add(firstLand);
 				listImage.remove(0);
 			}
@@ -55,7 +55,7 @@ public class Land {
 	}
 	public void draw(Graphics g) {
 		for(ImageLand imageLand :listImage) {
-		g.drawImage(imageLand.image, imageLand.posX, 175 - imageLand.image.getHeight(),null);
+		g.drawImage(imageLand.image, imageLand.posX, 200 - imageLand.image.getHeight(),null);
 		}
 	}
 	

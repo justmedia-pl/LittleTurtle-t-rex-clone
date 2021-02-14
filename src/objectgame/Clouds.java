@@ -8,6 +8,8 @@ import java.util.Random;
 
 import util.Resources;
 
+import static userinterface.GameWindow.theme;
+
 public class Clouds {
 	
 	private BufferedImage cloudImage;
@@ -18,9 +20,11 @@ public class Clouds {
 	public Clouds()
 	{
 		
-		cloudImages.add(Resources.getResourceImage("data/images/chain.png"));
-		cloudImages.add(Resources.getResourceImage("data/images/chain2.png"));
-		cloudImages.add(Resources.getResourceImage("data/images/chain3.png"));
+		cloudImages.add(Resources.getResourceImage("data/images/"+theme+"/paralax1.png"));
+		cloudImages.add(Resources.getResourceImage("data/images/"+theme+"/paralax2.png"));
+		cloudImages.add(Resources.getResourceImage("data/images/"+theme+"/paralax3.png"));
+		cloudImages.add(Resources.getResourceImage("data/images/"+theme+"/paralax4.png"));
+
 
 
 		Random randomShape = new Random();

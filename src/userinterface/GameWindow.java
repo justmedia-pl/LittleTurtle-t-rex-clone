@@ -9,7 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
-
+	public static String theme = "turtle";
 	private GameScreen gameScreen;
 	
 	public GameScreen getGameScreen() {
@@ -17,9 +17,10 @@ public class GameWindow extends JFrame {
 	}
 	
 	public GameWindow() {
-		super("Dino Game");
-		setSize(600,210);
+		super("Justmedia * SIMPLE GAME *");
+		setSize(583,215);
 		setLocation(600,400);
+		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		gameScreen = new GameScreen();
 		add(gameScreen);
