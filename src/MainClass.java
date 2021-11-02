@@ -1,5 +1,3 @@
-package pl.justmedia.trexframeworkgame;
-
 import pl.justmedia.trexframeworkgame.userinterface.GameWindow;
 
 public class MainClass {
