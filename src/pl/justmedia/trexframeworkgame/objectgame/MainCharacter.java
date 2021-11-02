@@ -1,16 +1,15 @@
-package objectgame;
+package pl.justmedia.trexframeworkgame.objectgame;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-import userinterface.GameWindow;
-import util.Animation;
-import util.Resources;
+import pl.justmedia.trexframeworkgame.util.Animation;
+import pl.justmedia.trexframeworkgame.util.Resources;
 
-import static userinterface.GameScreen.GRAVITY;
-import static userinterface.GameScreen.GROUNDY;
-import static userinterface.GameWindow.theme;
+import static pl.justmedia.trexframeworkgame.userinterface.GameScreen.GRAVITY;
+import static pl.justmedia.trexframeworkgame.userinterface.GameScreen.GROUNDY;
+import static pl.justmedia.trexframeworkgame.userinterface.GameWindow.theme;
 
 public class MainCharacter {
 	private float x = 0;

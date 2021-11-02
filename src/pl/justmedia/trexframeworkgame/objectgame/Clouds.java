@@ -1,4 +1,4 @@
-package objectgame;
+package pl.justmedia.trexframeworkgame.objectgame;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import util.Resources;
+import pl.justmedia.trexframeworkgame.util.Resources;
 
-import static userinterface.GameWindow.theme;
+import static pl.justmedia.trexframeworkgame.userinterface.GameWindow.theme;
 
 public class Clouds {
 	

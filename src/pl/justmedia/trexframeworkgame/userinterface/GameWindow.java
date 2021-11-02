@@ -1,11 +1,5 @@
-package userinterface;
+package pl.justmedia.trexframeworkgame.userinterface;
 
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
-import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
 public class GameWindow extends JFrame {
@@ -31,11 +25,7 @@ public class GameWindow extends JFrame {
 		gameScreen.startGame();
 	}
 	
-	public static void main(String args[]) {
-		GameWindow gw = new GameWindow();
-		gw.setVisible(true);
-		gw.startGame();
-	}
+
 	
 
 }

@@ -1,14 +1,13 @@
-package userinterface;
+package pl.justmedia.trexframeworkgame.userinterface;
 
-import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import javax.swing.*;
 
-import objectgame.*;
-import util.Resources;
+import pl.justmedia.trexframeworkgame.objectgame.*;
+import pl.justmedia.trexframeworkgame.util.Resources;
 
 public class GameScreen extends JPanel implements Runnable, KeyListener {
 

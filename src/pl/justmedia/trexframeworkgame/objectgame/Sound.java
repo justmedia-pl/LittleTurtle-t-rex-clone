@@ -1,4 +1,4 @@
-package objectgame;
+package pl.justmedia.trexframeworkgame.objectgame;
 
 import java.io.File;
 import java.io.IOException;

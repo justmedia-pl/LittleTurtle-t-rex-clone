@@ -1,4 +1,4 @@
-package objectgame;
+package pl.justmedia.trexframeworkgame.objectgame;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;

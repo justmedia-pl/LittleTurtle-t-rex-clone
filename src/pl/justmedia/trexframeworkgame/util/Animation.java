@@ -1,4 +1,4 @@
-package util;
+package pl.justmedia.trexframeworkgame.util;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
