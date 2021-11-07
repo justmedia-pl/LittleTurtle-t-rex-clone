@@ -1,6 +1,4 @@
 # LittleTurtle-t-rex-clone
-T-rex JavaGame
-
 This is a simple T-rex (CHROME) game farmework ported to JAVA with SWING.
 
 
